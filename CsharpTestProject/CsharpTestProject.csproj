@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpTestProject.EnumeratorDemo</StartupObject>
+    <StartupObject>CsharpTestProject.IteratorDemo</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,11 +48,14 @@
   <ItemGroup>
     <Compile Include="AbstractionDemo.cs" />
     <Compile Include="CollectionDemo.cs" />
+    <Compile Include="DictionaryDemo.cs" />
     <Compile Include="EnumDemo.cs" />
     <Compile Include="EnumeratorDemo.cs" />
+    <Compile Include="HashSetDemo.cs" />
     <Compile Include="Hierarchical_Inheritance.cs" />
     <Compile Include="HybridInheritance.cs" />
     <Compile Include="InterfaceDemo.cs" />
+    <Compile Include="IteratorDemo.cs" />
     <Compile Include="MethodOverridingDemo.cs" />
     <Compile Include="MultilevelInheritanceDemo.cs" />
     <Compile Include="MultipleInheritance2.cs" />
