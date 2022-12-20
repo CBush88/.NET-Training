@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpTestProject.IteratorDemo</StartupObject>
+    <StartupObject>CsharpTestProject.EventHandlingDemo</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,12 +51,16 @@
     <Compile Include="DictionaryDemo.cs" />
     <Compile Include="EnumDemo.cs" />
     <Compile Include="EnumeratorDemo.cs" />
+    <Compile Include="EventHandlingDemo.cs" />
+    <Compile Include="ExceptionDemo.cs" />
     <Compile Include="HashSetDemo.cs" />
     <Compile Include="Hierarchical_Inheritance.cs" />
     <Compile Include="HybridInheritance.cs" />
     <Compile Include="InterfaceDemo.cs" />
     <Compile Include="IteratorDemo.cs" />
     <Compile Include="MethodOverridingDemo.cs" />
+    <Compile Include="MulticastDelegateDemo.cs" />
+    <Compile Include="MultiCatchExceptionDemo.cs" />
     <Compile Include="MultilevelInheritanceDemo.cs" />
     <Compile Include="MultipleInheritance2.cs" />
     <Compile Include="MultipleInheritanceDemo.cs" />
@@ -64,8 +68,10 @@
     <Compile Include="PolymorphismDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleCastDelegateDemo.cs" />
     <Compile Include="SingleInheritanceDemo.cs" />
     <Compile Include="StructDemo.cs" />
+    <Compile Include="TestCustomExceptionDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
