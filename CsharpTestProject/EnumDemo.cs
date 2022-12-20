@@ -14,7 +14,7 @@ namespace CsharpTestProject
         }
         static void Main(string[] args)
         {
-            DayOfWeek day = DayOfWeek.Sunday; // Built-in Enum
+            //DayOfWeek day = DayOfWeek.Sunday; // Built-in Enum
             Colors c = Colors.Red;
             if (c == Colors.Red)
             {
