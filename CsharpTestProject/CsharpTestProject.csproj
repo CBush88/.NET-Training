@@ -33,9 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpTestProject.ReflectionExample</StartupObject>
+    <StartupObject>CsharpTestProject.TestExtensionMethod</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Extension2">
+      <HintPath>..\Extension2\bin\Debug\Extension2.dll</HintPath>
+    </Reference>
+    <Reference Include="MyExtensionMethod">
+      <HintPath>..\MyExtensionMethod\bin\Debug\MyExtensionMethod.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,6 +66,7 @@
     <Compile Include="HybridInheritance.cs" />
     <Compile Include="InterfaceDemo.cs" />
     <Compile Include="IteratorDemo.cs" />
+    <Compile Include="LambdaDemo.cs" />
     <Compile Include="MethodOverridingDemo.cs" />
     <Compile Include="MulticastDelegateDemo.cs" />
     <Compile Include="MultiCatchExceptionDemo.cs" />
@@ -72,11 +79,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionDemo.cs" />
     <Compile Include="ReflectionExample.cs" />
+    <Compile Include="SimpleThreadDemo.cs" />
     <Compile Include="SingleCastDelegateDemo.cs" />
     <Compile Include="SingleInheritanceDemo.cs" />
+    <Compile Include="SleepThreadDemo.cs" />
     <Compile Include="StructDemo.cs" />
     <Compile Include="TestCustomExceptionDemo.cs" />
     <Compile Include="TestEventDemo.cs" />
+    <Compile Include="TestExtensionMethod.cs" />
+    <Compile Include="ThreadBehaviorDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
