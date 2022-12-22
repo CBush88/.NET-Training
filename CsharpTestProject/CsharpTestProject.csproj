@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CsharpTestProject.TestExtensionMethod</StartupObject>
+    <StartupObject>CsharpTestProject.LINQtoObjectsDemo</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Extension2">
@@ -61,12 +61,14 @@
     <Compile Include="EnumeratorDemo.cs" />
     <Compile Include="EventHandlingDemo.cs" />
     <Compile Include="ExceptionDemo.cs" />
+    <Compile Include="FileHandlingDemo.cs" />
     <Compile Include="HashSetDemo.cs" />
     <Compile Include="Hierarchical_Inheritance.cs" />
     <Compile Include="HybridInheritance.cs" />
     <Compile Include="InterfaceDemo.cs" />
     <Compile Include="IteratorDemo.cs" />
     <Compile Include="LambdaDemo.cs" />
+    <Compile Include="LINQtoObjectsDemo.cs" />
     <Compile Include="MethodOverridingDemo.cs" />
     <Compile Include="MulticastDelegateDemo.cs" />
     <Compile Include="MultiCatchExceptionDemo.cs" />
@@ -77,12 +79,14 @@
     <Compile Include="PolymorphismDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuerySyntaxDemo.cs" />
     <Compile Include="ReflectionDemo.cs" />
     <Compile Include="ReflectionExample.cs" />
     <Compile Include="SimpleThreadDemo.cs" />
     <Compile Include="SingleCastDelegateDemo.cs" />
     <Compile Include="SingleInheritanceDemo.cs" />
     <Compile Include="SleepThreadDemo.cs" />
+    <Compile Include="StreamDemo.cs" />
     <Compile Include="StructDemo.cs" />
     <Compile Include="TestCustomExceptionDemo.cs" />
     <Compile Include="TestEventDemo.cs" />
