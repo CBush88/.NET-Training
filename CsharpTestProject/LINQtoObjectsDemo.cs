@@ -45,14 +45,15 @@ namespace CsharpTestProject
             result2.ForEach(e => Console.WriteLine(e.EmpName + "\t" + e.Location));
 
             var groupings = objEmp.GroupBy(e => e.Location.Length).ToList();
-            foreach(var group in groupings)
-            {
-                foreach(var emp in group)
-                {
-                    Console.Write(emp.EmpName + " Location: " + emp.Location + "\t");
-                }
-                Console.WriteLine();
-            }
+
+            //foreach (var group in groupings)
+            //{
+            //    foreach (var emp in group)
+            //    {
+            //        Console.Write(emp.EmpName + " Location: " + emp.Location + "\t");
+            //    }
+            //    Console.WriteLine();
+            //}
 
             Console.WriteLine();
 
