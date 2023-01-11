@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Student_DB_Management.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Genspark Web</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <asp:Image ID="Image1" runat="server" ImageUrl="images/genspark-logo.jpg" Width="50px" />
+            </asp:ContentPlaceHolder>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <marquee action="scroll">
+                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Names="Segoe UI" Font-Size="X-Large" ForeColor="Blue" Text="Welcome to Genspark"></asp:Label>
+            </marquee>
+            <div style="text-align:right;"><asp:HyperLink ID="HyperLink1" runat="server" Font-Italic="True" Font-Underline="True" ForeColor="#0033CC">Login</asp:HyperLink></div>
+        </div>
+        <br />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                <p>
+                    <em><strong>@Copyright Protected!</strong></em></p>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
