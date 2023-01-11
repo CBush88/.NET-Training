@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<MVCAppDemo.Models.Student>
+
+@{ 
+    ViewBag.Title = "ShowData";
+}
+
+<h2>ShowData</h2>
+@foreach(var student in Model)
+    {
+        <h3>Student Name: @student.StudentName</h3>
+        <h3>Student Course: @student.StudentCourse</h3>
+    }
+
