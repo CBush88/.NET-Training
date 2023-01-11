@@ -18,6 +18,8 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <asp:Button ID="Button1" runat="server" Text="View Data" OnClick="Button1_Click" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="Button3" runat="server" Text="View Data" OnClick="Button3_Click" />
     <br />
     <br />
     <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
@@ -78,6 +80,8 @@
         <tr>
             <td colspan="2">
                 <asp:Button ID="Button2" runat="server" Font-Bold="True" Font-Italic="True" ForeColor="Blue" OnClick="Button2_Click" Text="Add Employee Data" Width="152px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button4" runat="server" Font-Bold="True" Font-Italic="True" ForeColor="Blue" OnClick="Button4_Click" Text="Add Employee Data" Width="152px" />
                 <br />
                 <br />
                 <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Italic="True" ForeColor="Blue"></asp:Label>

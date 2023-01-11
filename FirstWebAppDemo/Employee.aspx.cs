@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,13 +25,14 @@ namespace FirstWebAppDemo
             con.Open();
             cmd = new SqlCommand("select * from Employee", con);
             SqlDataReader dr = cmd.ExecuteReader();
-            GridView1.DataSource= dr;
+            GridView1.DataSource = dr;
             GridView1.DataBind();
             con.Close();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            //using connected architecture
             con.Open();
             cmd = new SqlCommand("insert into employee values(@empId, @empName, @empDesignation, @empSalary, @empLocation)", con);
             cmd.CommandType = System.Data.CommandType.Text;
@@ -44,6 +46,39 @@ namespace FirstWebAppDemo
             con.Close();
 
             Label6.Text = "New Employee Added";
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            //using disconnected architecture
+            con.Open();
+            cmd = new SqlCommand("Select * from Employee", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+            con.Close();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            //using disconnected architecture
+            con.Open();
+            cmd = new SqlCommand("Select * from Employee", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Employee");
+            SqlCommandBuilder cmdr = new SqlCommandBuilder(da);
+            DataRow dr = ds.Tables["Employee"].NewRow();
+            dr[0] = int.Parse(TextBox1.Text);
+            dr[1] = TextBox2.Text;
+            dr[2] = TextBox3.Text;
+            dr[3] = double.Parse(TextBox4.Text);
+            dr[4] = TextBox5.Text;
+            ds.Tables["Employee"].Rows.Add(dr);
+            da.Update(ds, "Employee");
+            con.Close();
         }
     }
 }
