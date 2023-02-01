@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TestDB" Class="OperationDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=laptop-4r12q4c8;Initial Catalog=TestDB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TestDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Publisher" Member="Publishers">
+    <Type Name="Publisher">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="Publisher_Book" Member="Books" ThisKey="Id" OtherKey="PublisherId" Type="Book" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Book" Member="Books">
+    <Type Name="Book">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PublisherId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Publisher_Book" Member="Publisher" ThisKey="PublisherId" OtherKey="Id" Type="Publisher" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>
