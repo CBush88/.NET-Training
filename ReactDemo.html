@@ -1,0 +1,51 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+        <script type="text/babel">
+            // const root = document.getElementById("root");
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+
+            const className = 'container';
+            const version = React.version;
+            const h2Child = <h2 style ={{backgroundColor: 'blue', width: '100px'}}>Learning React {version}</h2>
+
+            //using JSX
+            const divElement = <div className={className}>{h2Child}</div>
+
+            // const divElement = <div className="container"><h2 style={{backgroundColor: 'blue', width: '100px'}}>Learning React</h2></div>;
+
+
+            //Using React.createElement()
+            /*
+            const element = React.createElement("h2", {
+                className: 'container'
+            }, "Learning React");
+
+            const divElement = React.createElement("div", null, element, "It's fun implementing code", React.createElement("h3", null, "Majorly FrontEnd."));
+
+            */
+
+            //for react 18 or later
+            root.render(divElement)
+
+
+            //for react 17 or previous
+            // ReactDOM.render(element, root);
+            console.log(divElement)
+
+            /* Using Vanilla JavaScript
+            //object representing an element
+            const element = document.createElement("h2");
+            element.textContent = "Learning React " + React.version;
+            element.className = "container";
+            root.appendChild(element);
+            */
+        </script>
+    </body>
+</html>
