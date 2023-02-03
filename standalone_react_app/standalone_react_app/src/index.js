@@ -7,15 +7,51 @@ import PropTypes from 'prop-types';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+
+function repeat() {
+    const time = new Date().toLocaleTimeString();
+
+    const element = (< div >
+        { time }
+    </div >
+    );
+
+    root.innerhtml = element;
+    root.render(element);
+
+}
+
+repeat();
+setInterval(repeat, 1000);
+
+//function TextLength({ text }) {
+//    return (
+//        <div>
+//            {/*The text {text.length > 0 ? `${text} has' ${text.length} characters` : `has no characters`}*/}
+//            {`The text ${text} has `}
+//            {text.length > 0 ? <strong>{text.length}</strong> : 'no'}
+//            {' characters.' }
+//        </div>
+//        )}
+
+//const element = <>
+//    <TextLength text="Learning React" />
+//    <TextLength text="" />
+
+//</>
+
+
+
+
 //functional components
 
-function User({ firstName, lastName }) {
-    return(
-        <div>
-            Hello {firstName} {lastName}!
-        </div>
-        )
-}
+//function User({ firstName, lastName }) {
+//    return(
+//        <div>
+//            Hello {firstName} {lastName}!
+//        </div>
+//        )
+//}
 
 //Validate the props using propTypes
 //const PropTypes = {
@@ -26,27 +62,27 @@ function User({ firstName, lastName }) {
 //    }
 //}
 
-User.propTypes = {
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired
-}
+//User.propTypes = {
+//    firstName: PropTypes.string.isRequired,
+//    lastName: PropTypes.string.isRequired
+//}
 
 //reusable component
 
-const Message = (props) => <div className={props.className}>{props.children}</div>
+//const Message = (props) => <div className={props.className}>{props.children}</div>
 
-const children = <> <h2>Child1</h2> <h2>Child2</h2> </>
+//const children = <> <h2>Child1</h2> <h2>Child2</h2> </>
 
-const element = <div className='container'>
-    <Message children={children}></Message>
-    <Message children='Yet another way' className='another'/>
-    <Message className='message1'>JSX is making it smooth</Message>
-    <Message className='message2'>React is easy</Message>
-    <Message className='message3'>Like JavaScript</Message>
+//const element = <div className='container'>
+//    <Message children={children}></Message>
+//    <Message children='Yet another way' className='another'/>
+//    <Message className='message1'>JSX is making it smooth</Message>
+//    <Message className='message2'>React is easy</Message>
+//    <Message className='message3'>Like JavaScript</Message>
 
-    <User firstName="Bob" lastName="Kite" />
+//    <User firstName="Bob" lastName="Kite" />
 
-</div>
+//</div>
 
 //using props
 /*
@@ -88,7 +124,7 @@ const divElement = React.createElement("div", null, element, "It's fun implement
 */
 
 //for react 18 or later
-root.render(element)
+//root.render(element)
 
 
 //for react 17 or previous
